@@ -4,7 +4,12 @@
 
 #section-1{
 
-    background-color: #9C9C9C;
+    // background-color: #9C9C9C;
+
+        // #biglogo{
+        //     height: 300px;
+        //     position: absolute;
+        // }
 
         #wholething{
             height: 1000px;
@@ -12,6 +17,66 @@
             margin: -80px 0 0 220px;
         }
 
+        #logo{
+            opacity: 0;
+        }
 
+        #clock-weather-date{
+            opacity: 0;
+        }
+
+        #nav-map{
+            opacity: 0;
+        }
+
+        #prndl{
+            opacity: 0;
+        }
+
+        #music-stuff{
+            opacity: 0;
+        }
+
+        #HC-stuff{
+            opacity: 0;
+        }
+
+        #nav-stuff{
+            opacity: 0;
+        }
+
+        #phone-stuff{
+            opacity: 0;
+        }
+
+        #speed-stuff{
+            opacity: 0;
+        }
+
+        
+
+        #speed-circle-2{
+            opacity: 0;
+        }
+
+        #HC-circle-2{
+            opacity: 0;
+        }
+
+        #music-circle{
+            opacity: 0;
+        }
+
+        #nav-circle{
+            opacity: 0;
+        }
+
+        #phone-circle-2{
+            opacity: 0;
+        }
+
+        
 }
+
+
 

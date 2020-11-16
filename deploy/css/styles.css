@@ -419,11 +419,50 @@ textarea {
 /* =============
     Section 1
 ============= */
-#section-1 {
-  background-color: #9C9C9C;
-}
 #section-1 #wholething {
   height: 1000px;
   width: 1000px;
   margin: -80px 0 0 220px;
+}
+#section-1 #logo {
+  opacity: 0;
+}
+#section-1 #clock-weather-date {
+  opacity: 0;
+}
+#section-1 #nav-map {
+  opacity: 0;
+}
+#section-1 #prndl {
+  opacity: 0;
+}
+#section-1 #music-stuff {
+  opacity: 0;
+}
+#section-1 #HC-stuff {
+  opacity: 0;
+}
+#section-1 #nav-stuff {
+  opacity: 0;
+}
+#section-1 #phone-stuff {
+  opacity: 0;
+}
+#section-1 #speed-stuff {
+  opacity: 0;
+}
+#section-1 #speed-circle-2 {
+  opacity: 0;
+}
+#section-1 #HC-circle-2 {
+  opacity: 0;
+}
+#section-1 #music-circle {
+  opacity: 0;
+}
+#section-1 #nav-circle {
+  opacity: 0;
+}
+#section-1 #phone-circle-2 {
+  opacity: 0;
 }
