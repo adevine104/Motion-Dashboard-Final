@@ -1,7 +1,9 @@
 
 
 import {gsap} from "gsap";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
+gsap.registerPlugin(DrawSVGPlugin);
 
 // var RBSpeed = .8;
 
@@ -26,75 +28,75 @@ drawInTL.from("#logo-circle-big", {
 
 
 
-drawInTL.from("#speed-circle-2", {
-    duration: 3,
-    scale:.75,
-    y: -260,
-    x: -420,
-    transformOrigin: "center"
-}, "play2");
+// drawInTL.from("#speed-circle-2", {
+//     duration: 3,
+//     scale:.75,
+//     y: -260,
+//     x: -420,
+//     transformOrigin: "center"
+// }, "play2");
 
-drawInTL.to("#speed-circle-2", {
-    duration: 3,
-    opacity: 1,
-    transformOrigin: "center"
-}, "play2");
+// drawInTL.to("#speed-circle-2", {
+//     duration: 3,
+//     opacity: 1,
+//     transformOrigin: "center"
+// }, "play2");
 
-drawInTL.from("#HC-circle-2", {
-    duration: 3,
-    scale:1.4,
-    x: -20,
-    y: 30,
-    transformOrigin: "center"
-}, "play2");
+// drawInTL.from("#HC-circle-2", {
+//     duration: 3,
+//     scale:1.4,
+//     x: -20,
+//     y: 30,
+//     transformOrigin: "center"
+// }, "play2");
 
-drawInTL.to("#HC-circle-2", {
-    duration: 3,
-    opacity: 1,
-    transformOrigin: "center"
-}, "play2");
+// drawInTL.to("#HC-circle-2", {
+//     duration: 3,
+//     opacity: 1,
+//     transformOrigin: "center"
+// }, "play2");
 
-drawInTL.from("#music-circle", {
-    duration: 3,
-    scale:1,
-    x: 400,
-    y: 25,
-    transformOrigin: "center"
-}, "play2");
+// drawInTL.from("#music-circle", {
+//     duration: 3,
+//     scale:1,
+//     x: 400,
+//     y: 25,
+//     transformOrigin: "center"
+// }, "play2");
 
-drawInTL.to("#music-circle", {
-    duration: 3,
-    opacity: 1,
-    transformOrigin: "center"
-}, "play2");
+// drawInTL.to("#music-circle", {
+//     duration: 3,
+//     opacity: 1,
+//     transformOrigin: "center"
+// }, "play2");
 
-drawInTL.from("#nav-circle", {
-    duration: 3,
-    scale:1.1,
-    x: 115,
-    y: -350,
-    transformOrigin: "center"
-}, "play2");
+// drawInTL.from("#nav-circle", {
+//     duration: 3,
+//     scale:1.1,
+//     x: 115,
+//     y: -350,
+//     transformOrigin: "center"
+// }, "play2");
 
-drawInTL.to("#nav-circle", {
-    duration: 3,
-    opacity: 1,
-    transformOrigin: "center"
-}, "play2");
+// drawInTL.to("#nav-circle", {
+//     duration: 3,
+//     opacity: 1,
+//     transformOrigin: "center"
+// }, "play2");
 
-drawInTL.from("#phone-circle-2", {
-    duration: 3,
-    scale:1.35,
-    x: 460,
-    y: -350,
-    transformOrigin: "center"
-}, "play2");
+// drawInTL.from("#phone-circle-2", {
+//     duration: 3,
+//     scale:1.35,
+//     x: 460,
+//     y: -350,
+//     transformOrigin: "center"
+// }, "play2");
 
-drawInTL.to("#phone-circle-2", {
-    duration: 3,
-    opacity: 1,
-    transformOrigin: "center"
-}, "play2");
+// drawInTL.to("#phone-circle-2", {
+//     duration: 3,
+//     opacity: 1,
+//     transformOrigin: "center"
+// }, "play2");
 
 drawInTL.to("#big-logo", {
     duration: 3,
@@ -102,6 +104,8 @@ drawInTL.to("#big-logo", {
     y: -320,
     transformOrigin: "center"
 }, "play2");
+
+
 
 
 
