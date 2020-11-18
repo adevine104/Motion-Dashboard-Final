@@ -4,17 +4,45 @@
 
 #section-1{
 
-    // background-color: #9C9C9C;
+    display: grid;
+    grid-template-columns: auto 70% auto;
+    grid-template-areas: ". motion .";
+    
+    >div{
+        grid-area: motion;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        // #biglogo{
-        //     height: 300px;
-        //     position: absolute;
+        svg{
+            width: 100%;
+        }
+    }
+
+
+        // #play{
+        //     opacity: 0;
         // }
 
-        #wholething{
-            height: 1000px;
-            width: 1000px;
-            margin: -80px 0 0 220px;
+        #phone-icon-big{
+            visibility: hidden;
+        }
+
+        #fan-icon-big{
+            visibility: hidden;
+        }
+
+        #radio-icon-big{
+            visibility: hidden;
+        }
+
+        #pause-1{
+            visibility: hidden;
+        }
+
+        #pause-2{
+            visibility: hidden;
         }
 
         #logo{
@@ -50,28 +78,6 @@
         }
 
         #speed-stuff{
-            opacity: 0;
-        }
-
-        
-
-        #speed-circle-2{
-            opacity: 0;
-        }
-
-        #HC-circle-2{
-            opacity: 0;
-        }
-
-        #music-circle{
-            opacity: 0;
-        }
-
-        #nav-circle{
-            opacity: 0;
-        }
-
-        #phone-circle-2{
             opacity: 0;
         }
 

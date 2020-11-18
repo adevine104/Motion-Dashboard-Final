@@ -46,13 +46,24 @@
 		"oAP": "/deploy/index.html",
 		"oF": 2
 		},
-	"/dev/js/demo.js": {
+	"/dev/js/intro.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/dev/js/demo-min.js",
+		"oAP": "/dev/js/intro-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dev/js/part-2.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/dev/js/part-2-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -230,14 +241,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/dev/section-1.html",
-		"oF": 0
-		},
-	"/gsap-bonus.tgz": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/gsap-bonus.tgz",
 		"oF": 0
 		},
 	"/node_modules": {
