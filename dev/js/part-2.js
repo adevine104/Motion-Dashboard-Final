@@ -12,7 +12,10 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin);
 const Part2TL = gsap.timeline();
 
 
-Part2TL.to("#Toxic-BritneySpears",{duration:5, x:-180},"play4")
+
+
+export function Part2Animation() {
+    Part2TL.to("#Toxic-BritneySpears",{duration:5, x:-180},"play4")
         .to("#play-1",{duration:1, morphSVG:"#pause-1"},"play4")
         .to("#play-2",{duration:1, morphSVG:"#pause-2"},"play4")
         .fromTo("#blue-line",{drawSVG:"0%"}, {duration: 5, drawSVG:"100%"}, "play4")
@@ -34,7 +37,5 @@ Part2TL.to("#Toxic-BritneySpears",{duration:5, x:-180},"play4")
         .to("#speedometer",{duration:2, scale: .85, x:-10, y:-20, transformOrigin: "right bottom"},"play8")
 
         .to("#nav-map",{duration:2, opacity:1},"play9")
-
-export function Part2Animation() {
     return Part2TL;
 }

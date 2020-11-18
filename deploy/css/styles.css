@@ -434,6 +434,9 @@ textarea {
 #section-1 > div svg {
   width: 100%;
 }
+#section-1 #Take-a-right-on-Ches {
+  visibility: hidden;
+}
 #section-1 #phone-icon-big {
   visibility: hidden;
 }

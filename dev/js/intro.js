@@ -8,10 +8,11 @@ gsap.registerPlugin(DrawSVGPlugin);
 // var tl = gsap.timeline({ease: "power2.out"});
 
 
-const IntroTL = gsap.timeline();
+const introTL = gsap.timeline();
 
 
-IntroTL.from("#spikey-shape-big", {duration: 1.5, scale: 0, transformOrigin: "center"}, "play")
+export function IntroAnimation() {
+    introTL.from("#spikey-shape-big", {duration: 1.5, scale: 0, transformOrigin: "center"}, "play")
         .from("#logo-circle-big", {duration: 3, scale: 10, transformOrigin: "center"}, "play")
         .to("#big-logo", {duration: 2, scale: .2, y: -320, transformOrigin: "center"}, "play2")
         .fromTo("#speed-circle, #HC-circle, #music-circle, #nav-circle, #phone-circle",{drawSVG:"0%"}, {duration: 1.5, drawSVG:"100%"}, "play2.5")
@@ -24,8 +25,5 @@ IntroTL.from("#spikey-shape-big", {duration: 1.5, scale: 0, transformOrigin: "ce
         .to("#HC-circle",{duration: 3, opacity:0},"play3")
         .to("#nav-circle",{duration: 3, opacity:0},"play3")
         .to("#phone-circle",{duration: 3, opacity:0},"play3");
-
-
-export function IntroAnimation() {
-    return IntroTL;
+    return introTL;
 }
