@@ -435,16 +435,16 @@ textarea {
   width: 100%;
 }
 #section-1 #Take-a-right-on-Ches {
-  visibility: hidden;
+  opacity: 0;
 }
 #section-1 #phone-icon-big {
-  visibility: hidden;
+  opacity: 0;
 }
 #section-1 #fan-icon-big {
-  visibility: hidden;
+  opacity: 0;
 }
 #section-1 #radio-icon-big {
-  visibility: hidden;
+  opacity: 0;
 }
 #section-1 #pause-1 {
   visibility: hidden;
