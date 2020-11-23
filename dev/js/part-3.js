@@ -12,7 +12,7 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, MotionPathPlugin);
 
 const Part3TL = gsap.timeline();
 
-
+gsap.set("#car-pointer", {transformOrigin: "50% 50%", xPercent: -50, yPercent: -50});
 
 
 export function Part3Animation() {
@@ -29,11 +29,12 @@ export function Part3Animation() {
             
             .to("#pointer",{duration:3, rotate:60, transformOrigin: "right"},"play13")
 
-            .fromTo("#nav-white-line",{drawSVG:"10%"}, {duration: 15, drawSVG:"100%"}, "play13")
+            //.fromTo("#nav-white-line",{drawSVG:"10%"}, {duration: 15, drawSVG:"100%"}, "play13")
+            .from("#nav-white-line",{duration: 12, drawSVG:"0%" , ease: "none"}, "play13")
 
             // .to("#car-pointer-2", {motionPath: {path: "#nav-white-line", align: "#car-pointer", alignOrigin: [.5, .5], autoRotate: true}, duration: 15}, "play13")
 
-            .to("#car-pointer-2", {motionPath: {path: "#nav-white-line", align: "#car-pointer", alignOrigin: [0, 0], autoRotate: true}, transformOrigin: "50% 50%", duration: 15, ease: "power1.inOut"}, "play13")
+            .to("#car-pointer", {motionPath: {path: "#nav-blue-line", align: "#nav-white-line", autoRotate: true}, duration: 12, ease: "none"}, "play13")
 
             .to("#pointer",{duration:3, rotate:0, transformOrigin: "right"},"play14")
 
