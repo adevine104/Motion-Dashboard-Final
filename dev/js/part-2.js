@@ -15,7 +15,14 @@ const Part2TL = gsap.timeline();
 
 
 export function Part2Animation() {
-    Part2TL.to("#Toxic-BritneySpears",{duration:5, x:-180},"play4")
+    Part2TL.to("#touch",{duration:.1, x:-435, y:10},"play3")
+            .to("#touch-print, #outside-ring",{duration:1, opacity: 1},"play3-1")
+            .to("#touch-print",{duration:1, scale:.65, transformOrigin: "center"},"play3-1")
+            .to("#outside-ring",{duration:1, scale:.85, transformOrigin: "center"},"play3-1")
+            .to("#touch-print",{duration:1, scale:1, opacity:0, transformOrigin: "center"},"play3-2")
+            .to("#outside-ring",{duration:1, scale:1.5, opacity:0, transformOrigin: "center"},"play3-2")
+    
+        .to("#Toxic-BritneySpears",{duration:5, x:-180},"play4")
         .to("#play-1",{duration:1, morphSVG:"#pause-1"},"play4")
         .to("#play-2",{duration:1, morphSVG:"#pause-2"},"play4")
         .fromTo("#blue-line",{drawSVG:"0%"}, {duration: 5, drawSVG:"100%"}, "play4")
@@ -25,11 +32,19 @@ export function Part2Animation() {
         .to("#Nav",{duration:2, y:225},"play5")
 
 
+            .to("#touch",{duration:.1, x:-49, y:45},"play5-0")
+            .to("#touch-print, #outside-ring",{duration:1, opacity: 1},"play5-1")
+            .to("#touch-print",{duration:1, scale:.65, transformOrigin: "center"},"play5-1")
+            .to("#outside-ring",{duration:1, scale:.85, transformOrigin: "center"},"play5-1")
+            .to("#touch-print",{duration:1, scale:1, opacity:0, transformOrigin: "center"},"play5-2")
+            .to("#outside-ring",{duration:1, scale:1.5, opacity:0, transformOrigin: "center"},"play5-2")
+
+
         .to("#Triangle-2",{duration:.5, scale: .8, transformOrigin: "center"},"play5-1")
         .to("#Triangle-2",{duration:.75, scale: 1, transformOrigin: "center"},"play5-2")
-        .to("#Triangle-2",{duration:.75, scale: .8, transformOrigin: "center"},"play5-2")
-        .to("#Triangle-2",{duration:.5, scale: 1, transformOrigin: "center"},"play5-3")
-        .to("#up-down",{duration:2, y:10},"play5-3")
+        // .to("#Triangle-2",{duration:.75, scale: .8, transformOrigin: "center"},"play5-4")
+        // .to("#Triangle-2",{duration:.5, scale: 1, transformOrigin: "center"},"play5-5")
+        .to("#up-down",{duration:2, y:10},"play5-5")
 
 
         .to("#music",{duration:2, scale: .75, x:-50},"play6")
@@ -38,6 +53,13 @@ export function Part2Animation() {
         .to("#phone",{duration:2, x:-60},"play6")
 
 
+
+        .to("#touch",{duration:.1, x:-290, y:205},"play6-0")
+        .to("#touch-print, #outside-ring",{duration:1, opacity: 1},"play6-1")
+        .to("#touch-print",{duration:1, scale:.65, transformOrigin: "center"},"play6-1")
+        .to("#outside-ring",{duration:1, scale:.85, transformOrigin: "center"},"play6-1")
+        .to("#touch-print",{duration:1, scale:1, opacity:0, transformOrigin: "center"},"play6-2")
+        .to("#outside-ring",{duration:1, scale:1.5, opacity:0, transformOrigin: "center"},"play6-2")
 
         .to("#Home",{duration:1, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play7")
 

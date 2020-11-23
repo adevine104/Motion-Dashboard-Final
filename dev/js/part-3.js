@@ -31,7 +31,11 @@ export function Part3Animation() {
 
             .fromTo("#nav-white-line",{drawSVG:"10%"}, {duration: 15, drawSVG:"100%"}, "play13")
 
-            .to("#car-pointer-2", {motionPath: {path: "#nav-white-line", align: "#car-pointer", alignOrigin: [0.5, 0.5], autoRotate: true}, duration: 15, ease: "power1.inOut"}, "play13")
+            // .to("#car-pointer-2", {motionPath: {path: "#nav-white-line", align: "#car-pointer", alignOrigin: [.5, .5], autoRotate: true}, duration: 15}, "play13")
+
+            .to("#car-pointer-2", {motionPath: {path: "#nav-white-line", align: "#car-pointer", alignOrigin: [0, 0], autoRotate: true}, transformOrigin: "50% 50%", duration: 15, ease: "power1.inOut"}, "play13")
+
+            .to("#pointer",{duration:3, rotate:0, transformOrigin: "right"},"play14")
 
     return Part3TL;
 }
