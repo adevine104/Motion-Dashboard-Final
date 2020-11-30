@@ -434,7 +434,19 @@ textarea {
 #section-1 > div svg {
   width: 100%;
 }
-#section-1 #Take-a-right-on-Ches {
+#section-1 #directions {
+  opacity: 0;
+}
+#section-1 #directions-2 {
+  opacity: 0;
+}
+#section-1 #directions-3 {
+  opacity: 0;
+}
+#section-1 #directions-4 {
+  opacity: 0;
+}
+#section-1 #directions-5 {
   opacity: 0;
 }
 #section-1 #touch-print {

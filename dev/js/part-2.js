@@ -9,6 +9,7 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin);
 // var tl = gsap.timeline({ease: "power2.out"});
 
 
+
 const Part2TL = gsap.timeline();
 
 
@@ -46,6 +47,7 @@ export function Part2Animation() {
         // .to("#Triangle-2",{duration:.5, scale: 1, transformOrigin: "center"},"play5-5")
         .to("#up-down",{duration:2, y:10},"play5-5")
 
+        // .to("#72",{duration:2,},"play5-5")
 
         .to("#music",{duration:2, scale: .75, x:-50},"play6")
         .to("#heatcool",{duration:2, scale: 1, x:70, y:-50},"play6")
@@ -79,5 +81,9 @@ export function Part2Animation() {
         .to("#speedometer",{duration:2, scale: .85, x:-10, y:-20, transformOrigin: "right bottom"},"play8")
 
         .to("#nav-map",{duration:2, opacity:1},"play9")
+
+        .to("#nav-stuff",{duration:1, opacity:0},"play9-1")
+        .to("#directions",{duration:1, opacity:1},"play9-1")
+
     return Part2TL;
 }

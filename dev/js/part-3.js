@@ -36,6 +36,9 @@ export function Part3Animation() {
 
             .to("#car-pointer", {motionPath: {path: "#nav-blue-line", align: "#nav-white-line", autoRotate: true}, duration: 12, ease: "none"}, "play13")
 
+            .to("#directions-1",{duration:1, opacity:0},"play14")
+            .to("#directions-5",{duration:1, opacity:1},"play14")
+
             .to("#pointer",{duration:3, rotate:0, transformOrigin: "right"},"play14")
 
     return Part3TL;
