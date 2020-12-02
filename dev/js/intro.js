@@ -13,6 +13,8 @@ const introTL = gsap.timeline();
 
 export function IntroAnimation() {
     introTL.from("#spikey-shape-big", {duration: 1.5, scale: 0, transformOrigin: "center"}, "play")
+    // .to("#pause-1, #pause-2",{duration:3, rotate:-90},"play")
+        .to("#Toxic-2",{duration:3, x:720},"play")
         .to("#phone",{duration: 3, y:125},"play")
         .to("#Nav",{duration: 3, y:125},"play")
         .from("#logo-circle-big", {duration: 3, scale: 10, transformOrigin: "center"}, "play")

@@ -449,6 +449,66 @@ textarea {
 #section-1 #directions-5 {
   opacity: 0;
 }
+#section-1 #seventyone {
+  opacity: 0;
+}
+#section-1 #seventy {
+  opacity: 0;
+}
+#section-1 #sixnine {
+  opacity: 0;
+}
+#section-1 #sixeight {
+  opacity: 0;
+}
+#section-1 #five {
+  opacity: 0;
+}
+#section-1 #ten {
+  opacity: 0;
+}
+#section-1 #fifteen {
+  opacity: 0;
+}
+#section-1 #twentyfive {
+  opacity: 0;
+}
+#section-1 #twenty {
+  opacity: 0;
+}
+#section-1 #thirty {
+  opacity: 0;
+}
+#section-1 #thirtyfive {
+  opacity: 0;
+}
+#section-1 #fourty {
+  opacity: 0;
+}
+#section-1 #C-thirtythree {
+  opacity: 0;
+}
+#section-1 #C-thirtysix {
+  opacity: 0;
+}
+#section-1 #C-thirtynine {
+  opacity: 0;
+}
+#section-1 #C-fourtyone {
+  opacity: 0;
+}
+#section-1 #S-ninenine {
+  opacity: 0;
+}
+#section-1 #S-onehun {
+  opacity: 0;
+}
+#section-1 #S-oneOone {
+  opacity: 0;
+}
+#section-1 #S-oneOtwo {
+  opacity: 0;
+}
 #section-1 #touch-print {
   opacity: 0;
 }
@@ -471,6 +531,18 @@ textarea {
   visibility: hidden;
 }
 #section-1 #pause-2 {
+  visibility: hidden;
+}
+#section-1 #pause-3 {
+  opacity: 0;
+}
+#section-1 #pause-4 {
+  opacity: 0;
+}
+#section-1 #play-3 {
+  visibility: hidden;
+}
+#section-1 #play-4 {
   visibility: hidden;
 }
 #section-1 #logo {
