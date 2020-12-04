@@ -62,6 +62,14 @@
 		"oAP": "/deploy/sound-effects/Car start sound effect.mp3",
 		"oF": 0
 		},
+	"/design/dashboard sketch.sketch": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/design/dashboard sketch.sketch",
+		"oF": 0
+		},
 	"/dev/index.kit": {
 		"cB": 0,
 		"ft": 2048,
