@@ -3,23 +3,9 @@ import {DrawSVGPlugin} from "gsap/DrawSVGPlugin";
 
 gsap.registerPlugin(DrawSVGPlugin);
 
-// var RBSpeed = .8;
+
 
 // var introTL = gsap.timeline({ease: "power2.out"});
-
-
-// const fanTL = gsap.timeline({repeat: -1});
-
-// fanTL.to("#fan", {duration: 3, rotate: 360, repeat: -1, transformOrigin: "center"})
-
-// function animateFan(){
-
-//     if(introTL === true){
-
-//         fanTL.play();
-// }
-// }
-
 
 
 const introTL = gsap.timeline();
@@ -28,8 +14,8 @@ const introTL = gsap.timeline();
 export function IntroAnimation() {
     introTL.from("#spikey-shape-big", {duration: 1.5, scale: 0, transformOrigin: "center"}, "play")
     // .to("#pause-1, #pause-2",{duration:3, rotate:-90},"play")
-        .to("#Toxic-2",{duration:.01, x:720},"play")
-        .to("#phone",{duration: .01, y:125},"play")
+        // .to("#Toxic-2",{duration:.01, x:720},"play")
+        .to("#phone",{duration: .01, y:125, x:-6},"play")
         .to("#Nav",{duration: .01, y:125},"play")
         .from("#logo-circle-big", {duration: 3, scale: 10, transformOrigin: "center"}, "play")
         .to("#big-logo", {duration: 2, scale: .2, y: -320, transformOrigin: "center"}, "play2")
@@ -62,21 +48,46 @@ export function itemsInAnimation() {
     itemsInTL.fromTo("#fuel-filler",{drawSVG:"0%"}, {duration: 1, drawSVG:"100%"}, "play3")
     .fromTo("#fuel-line",{drawSVG:"0%"}, {duration: 1, drawSVG:"100%"}, "play3")
     .from("#F, #E", {duration: 1, opacity: 0, transformOrigin: "left bottom"}, "play3")
+    .from("#speed-info", {duration: 2, opacity: 0, x:330, transformOrigin: "center"}, "play3")
+    .from("#speed-pointer", {duration: 1, opacity: 0, scaleY:2, transformOrigin: "left"}, "play3")
 
-    .from("#tick-1", {duration: 1, opacity: 0, scaleX:1, transformOrigin: "left bottom"}, "play3")
-    .from("#tick-2", {duration: 1, opacity: 0, scaleX:1, transformOrigin: "left"}, "play3")
-    .from("#tick-3", {duration: 1, opacity: 0, scaleX:1, transformOrigin: "left top"}, "play3")
-    .from("#tick-4", {duration: 1, opacity: 0, scaleY:1, transformOrigin: "top"}, "play3")
-    .from("#tick-5", {duration: 1, opacity: 0, scaleY:1, transformOrigin: "right top"}, "play3")
+    .from("#tick-1", {duration: 1, opacity: 0, scaleX:0, transformOrigin: "right"}, "play3")
+    .from("#tick-2", {duration: 1, opacity: 0, scaleX:0, transformOrigin: "right"}, "play3")
+    .from("#tick-3", {duration: 1, opacity: 0, scaleY:0, transformOrigin: "left top"}, "play3")
+    .from("#tick-4", {duration: 1, opacity: 0, scaleY:0, transformOrigin: "top"}, "play3")
+    .from("#tick-5", {duration: 1, opacity: 0, scaleY:0, transformOrigin: "right top"}, "play3")
 
 
     .from("#hotseat, #fan, #border-seat", {duration: 1, opacity: 0, x:30, stagger:.2, transformOrigin: "right"}, "play3")
-    .from("#Triangle-1", {duration: 1, opacity: 0, y:10, transformOrigin: "right"}, "play3")
-    .from("#Triangle-2", {duration: 1, opacity: 0, y:5, transformOrigin: "right"}, "play3")
+    .from("#Triangle-1", {duration: 1, opacity: 0, y:10, transformOrigin: "center"}, "play3")
+    .from("#Triangle-2", {duration: 1, opacity: 0, y:5, transformOrigin: "center"}, "play3")
     .from("#HC-counter", {duration: 1, opacity: 0}, "play3")
-    .from("#H, #C, #degree", {duration: 1, opacity: 0, transformOrigin: "left bottom"}, "play3")
+    .from("#H, #C, #degree", {duration: 1, opacity: 0, transformOrigin: "center"}, "play3")
+    .from("#red2blue-rec", {duration: 1, opacity: 0, x:-30, transformOrigin: "center"}, "play3")
+    .from("#ticks", {duration: 1, opacity: 0, scaleY:0, transformOrigin: "bottom"}, "play3")
+    .from("#up-down", {duration: 1, opacity: 0, scaleX:0, transformOrigin: "left"}, "play3")
+
+
+    .from("#radio-title", {duration: 1, opacity: 0, y:10, transformOrigin: "center"}, "play3")
+    .from("#ff-pl-rwd", {duration: 1, opacity: 0, y:30, transformOrigin: "center"}, "play3")
+    .from("#white-line, #blue-line", {duration: 1, opacity: 0}, "play3")
+    .from("#volume", {duration: 1, scaleX:0, opacity: 0, transformOrigin: "center"}, "play3")
+    .from("#Triangle-right", {duration: 1, opacity: 0, x:5, transformOrigin: "center"}, "play3")
+    .from("#Triangle-left", {duration: 1, opacity: 0, x:40, transformOrigin: "center"}, "play3")
+    .from("#CD, #radio-icon", {duration: 1, opacity: 0, y:400, stagger:.2, transformOrigin: "center"}, "play3")
+    .from("#AUX", {duration: .8, opacity: 0, y:30, transformOrigin: "center"}, "play3")
+    .from("#Toxic-1, #Toxic-2", {duration: 1, opacity: 0, x:100, transformOrigin: "center"}, "play3")
+
+
+    .from("#caller-list, #caller-blocks", {duration: 1, opacity: 0, x:30, transformOrigin: "center"}, "play3")
+    .from("#arrow-up", {duration: 1, opacity: 0, y:10, transformOrigin: "center"}, "play3")
+    .from("#arrow-down", {duration: 1, opacity: 0, y:5, transformOrigin: "center"}, "play3")
     
 
+    .from("#NAV", {duration: 1, opacity: 0, transformOrigin: "center"}, "play3")
+    .from("#Triangle-3", {duration: 1, opacity: 0, y:10, transformOrigin: "center"}, "play3")
+    .from("#Triangle-4", {duration: 1, opacity: 0, y:5, transformOrigin: "center"}, "play3")
+    .from("#Home, #Work, #Recents, #AddressBook, #NewDestination", {duration: 1, opacity: 0, x:30, stagger:.2, transformOrigin: "bottom"}, "play3")
 
 
     return itemsInTL;

@@ -10,10 +10,10 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin);
 var counterSpeed = 100;
 
 // Set this number you want your counter to count up to. Default is 20
-var topSpeed = 20;
+var topSpeed = 68;
 
 // If yu don't want your speed to start at 0, change it here. Default is 0.
-var speedNumber = 0;
+var speedNumber = 72;
 
 var myVar;
 
@@ -42,15 +42,6 @@ var twoSecSpeed = 1;
 
 // var tl = gsap.timeline({ease: "power2.out"});
 
-// var audio    = document.createElement("audio");
-
-// audio.loop = true;
-// audio.src  = "../sound-effects/Britney Spears - Toxic (Official Video).mp3";
-
-// function init(e:onComplete):void{
-// tl.play();
-// }
-
 
 
 const Part2TL = gsap.timeline();
@@ -65,8 +56,8 @@ export function Part2Animation() {
             .to("#touch-print",{duration:touchSpeed, scale:1, opacity:0, transformOrigin: "center"},"play3-2")
             .to("#outside-ring",{duration:touchSpeed, scale:1.5, opacity:0, transformOrigin: "center"},"play3-2")
     
-        .to("#Toxic-1",{duration:3.5, x:-480, ease:"none"},"play4")
-        .to("#Toxic-2",{duration:4, x:-10, ease:"none"},"play4")
+        // .to("#Toxic-1",{duration:3.5, x:-480, ease:"none"},"play4")
+        // .to("#Toxic-2",{duration:4, x:-10, ease:"none"},"play4")
         .to("#play-1",{duration:oneSecSpeed, morphSVG:"#pause-1"},"play4")
         .to("#play-2",{duration:oneSecSpeed, morphSVG:"#pause-2"},"play4")
         // .to("#pause-1, #pause-2, #play-1, #play-2",{duration:.01, rotate:-90},"play4-0")
@@ -100,14 +91,6 @@ export function Part2Animation() {
         // .to("#Triangle-2",{duration:.75, scale: .8, transformOrigin: "center"},"play5-4")
         // .to("#Triangle-2",{duration:.5, scale: 1, transformOrigin: "center"},"play5-5")
 
-        // .to("#seventytwo",{duration:.25, opacity:0},"play5-55")
-        // .to("#seventyone",{duration:.25, opacity:1},"play5-55")
-        // .to("#seventyone",{duration:.25, opacity:0},"play5-6")
-        // .to("#seventy",{duration:.25, opacity:1},"play5-6")
-        // .to("#seventy",{duration:.25, opacity:0},"play5-7")
-        // .to("#sixnine",{duration:.25, opacity:1},"play5-7")
-        // .to("#sixnine",{duration:.25, opacity:0},"play5-8")
-        // .to("#sixeight",{duration:.25, opacity:1},"play5-8")
 
         .to("#up-down",{duration:twoSecSpeed, y:10},"play5-9")
 
