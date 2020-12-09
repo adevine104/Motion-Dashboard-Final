@@ -9,28 +9,28 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, MotionPathPlugin);
 
 // var tl = gsap.timeline({ease: "power2.out"});
 
-var counterSpeed2 = 100;
+var counterSpeed = 100;
 // Set this number you want your counter to count up to. Default is 20
-var topSpeed2 = 40;
+var topSpeed = 40;
 // If yu don't want your speed to start at 0, change it here. Default is 0.
-var speedNumber2 = 0;
+var speedNumber = 0;
 
 
-var myVar2;
+var myVar;
 
 function startTimer2(){
-    myVar2 = setInterval(speedCounter2, counterSpeed2);
+    myVar = setInterval(speedCounter, counterSpeed);
 }
 
-export function speedCounter2() {
-	if (speedNumber2 < topSpeed2) {
-        speedNumber2++;
-       $("#speed-counter").html(speedNumber2);
+export function speedCounter() {
+	if (speedNumber < topSpeed) {
+        speedNumber++;
+       $("#speed-counter-2").html(speedNumber);
 		//document.getElementById("HC-counter").innerHTML = speedNumber;
 	} else {
-		clearInterval(myVar2);
+		clearInterval(myVar);
 	}
-	return speedNumber2;
+	return speedNumber;
 }
 
 
@@ -47,8 +47,8 @@ export function Part3Animation() {
             .to("#phone-call",{duration:1, y:50, transformOrigin: "left"},"play9-5")
             .from("#phone-call",{duration:1, opacity:0, x:-100, scaleX:1, transformOrigin: "left"},"play9-6")
             
-            .to("#music",{duration:.75, scale: .18, y:220, x:370},"play9-6")
-            .to("#heatcool",{duration:.75, scale: .25, y:250, x:-40},"play9-6")
+            .to("#music",{duration:1, scale: .18, y:220, x:370},"play9-6")
+            .to("#heatcool",{duration:1, scale: .25, y:250, x:-40},"play9-6")
 
             .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-6")
             .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-7")
@@ -60,16 +60,16 @@ export function Part3Animation() {
 
             .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-61")
             .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-71")
-            // .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-81")
-            // .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-91")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-81")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-91")
             .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:0, transformOrigin: "center"},"play9-92")
 
             .to("#touch",{duration:.1, x:-300, y:-100},"play9-11")
-            .to("#touch-print, #outside-ring",{duration:.5, x:-58, y:-12, opacity: 1},"play9-12")
-            .to("#touch-print",{duration:.5, scale:.65, transformOrigin: "center"},"play9-12")
-            .to("#outside-ring",{duration:.5, scale:.85, transformOrigin: "center"},"play9-12")
-            .to("#touch-print",{duration:.5, scale:1, opacity:0, transformOrigin: "center"},"play9-13")
-            .to("#outside-ring",{duration:.5, scale:1.5, opacity:0, transformOrigin: "center"},"play9-13")
+            .to("#touch-print, #outside-ring",{duration:.75, x:-58, y:-12, opacity: 1},"play9-12")
+            .to("#touch-print",{duration:.75, scale:.65, transformOrigin: "center"},"play9-12")
+            .to("#outside-ring",{duration:.75, scale:.85, transformOrigin: "center"},"play9-12")
+            .to("#touch-print",{duration:.75, scale:1, opacity:0, transformOrigin: "center"},"play9-13")
+            .to("#outside-ring",{duration:.75, scale:1.5, opacity:0, transformOrigin: "center"},"play9-13")
 
             .to("#phone-call",{duration:1, opacity:0, x:-100, scaleX:0, transformOrigin: "left"},"play9-14")
             .to("#phone",{duration:1, opacity:1, x:10, transformOrigin: "center"},"play9-15")
@@ -79,22 +79,22 @@ export function Part3Animation() {
 
             
             
-            .to("#P",{duration:.35, scale:.78, fill:"#6FA3FF", transformOrigin: "left bottom"},"play10")
+            .to("#P",{duration:.5, scale:.78, fill:"#6FA3FF", transformOrigin: "left bottom"},"play10")
 
-            .to("#R",{duration:.35, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play10")
-            .to("#R",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play11")
+            .to("#R",{duration:.5, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play10")
+            .to("#R",{duration:.5, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play11")
 
-            .to("#N",{duration:.35, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play11")
-            .to("#N",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play12")
+            .to("#N",{duration:.5, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play11")
+            .to("#N",{duration:.5, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play12")
 
-            .to("#D",{duration:.35, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play12")
+            .to("#D",{duration:.5, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play12")
 
             
             // .to("#pointer",{duration:3, rotate:60, transformOrigin: "right"},"play13")
             .to("#speed-pointer",{duration:.01, rotate:0, transformOrigin: "center"},"play13")
             .fromTo("#speed-pointer",{drawSVG:"41% 42%"}, {duration: 1.5, drawSVG:"57.5% 58.5%"}, "play13")
   
-            .to("#speed-counter",{duration: 1, onComplete: startTimer2}, "play13")
+            .to("#speed-counter-2",{duration: 1, onComplete: startTimer2}, "play13")
             
             .fromTo("#nav-white-line",{drawSVG:"0%"}, {duration: 2, drawSVG:"25%", ease: "none"}, "play13-0")
             .to("#directions-1",{duration:.5, opacity:0},"play13-1")
@@ -141,23 +141,11 @@ export function Part3Animation() {
 
 
 
-            .to("#car-pointer", {motionPath: {path: "#nav-blue-line", align: "#nav-white-line", autoRotate: true}, duration: 8, ease: "none", transformOrigin: "center"}, "play13-0")
+            .to("#car-pointer", {motionPath: {path: "#nav-blue-line", align: "#nav-white-line", autoRotate: true}, duration: 8, ease: "none"}, "play13-0")
 
 
             // .to("#pointer",{duration:3, rotate:0, transformOrigin: "right"},"play14")
             .fromTo("#speed-pointer",{drawSVG:"57.5% 58.5%"}, {duration: 1.5, drawSVG:"41% 42%"}, "play14")
-
-
-
-            .to("#D",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play14-1")
-
-            .to("#N",{duration:.35, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play14-1")
-            .to("#N",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play15")
-
-            .to("#R",{duration:.35, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play15")
-            .to("#R",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play16")
-
-            .to("#P",{duration:.35, scale:1, fill:"#BBD7FF", transformOrigin: "left bottom"},"play16")
 
 
     return Part3TL;
