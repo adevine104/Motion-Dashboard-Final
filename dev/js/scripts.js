@@ -30,7 +30,7 @@ radio2Timeline();
 phoneCallTimeline();
 
 function fanTimeline(){
-    const fanTimeline = gsap.timeline({repeat:10});
+    const fanTimeline = gsap.timeline({repeat:12});
 
     // tell timeoine to play
     fanTimeline.to("#fan, #fan-icon-big", {duration: 3, rotate: 360, ease: "Linear.easeNone", transformOrigin: "center"});
@@ -48,7 +48,7 @@ function musicTimeline(){
 }
 
 function musicLineTimeline(){
-    const musicLineTimeline = gsap.timeline({delay:11});
+    const musicLineTimeline = gsap.timeline({delay:9});
 
     // tell timeoine to play
     musicLineTimeline.fromTo("#blue-line",{drawSVG:"25%"}, {duration: 15, drawSVG:"100%"});
@@ -67,7 +67,7 @@ function radioTimeline(){
 }
 
 function radio2Timeline(){
-    const radio2Timeline = gsap.timeline({repeat:8});
+    const radio2Timeline = gsap.timeline({repeat:10});
 
     // tell timeoine to play
     radio2Timeline.to("#RB-far-right, #RB-middle-right, #RB-close-right", {duration: 1.5, scale: 1.25, opacity: 0, x:15, stagger:.2, transformOrigin: "right center"} ,"rays")

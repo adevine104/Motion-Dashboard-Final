@@ -427,8 +427,6 @@ textarea {
 #section-1 > div {
   grid-area: motion;
   height: 100vh;
-  width: 100vh;
-  margin-left: -120px;
   display: flex;
   align-items: center;
   justify-content: center;
