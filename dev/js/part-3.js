@@ -42,11 +42,13 @@ gsap.set("#car-pointer", {transformOrigin: "50% 50%", xPercent: -50, yPercent: -
 export function Part3Animation() {
 
     Part3TL.to("#phone",{duration:.75, opacity:0, x:-100, transformOrigin: "center"},"play9-5")
-            .to("#phone-call",{duration:.75, y:50, transformOrigin: "left"},"play9-5")
+            .to("#phone-call",{duration:.75, y:40, transformOrigin: "left"},"play9-5")
+
+            .to("#music", {motionPath: {path: "#dots-path", align: "#dots-path", autoRotate: false}, duration: .75, ease: "none"}, "play9-5")
+            .to("#heatcool", {motionPath: {path: "#dots-path-2", align: "#dots-path-2", autoRotate: false}, duration: .75, ease: "none"}, "play9-5")
+
             .from("#phone-call",{duration:.75, opacity:0, x:-100, scaleX:1, transformOrigin: "left"},"play9-6")
-            
-            .to("#music",{duration:.75, scale: .18, y:220, x:370},"play9-6")
-            .to("#heatcool",{duration:.75, scale: .25, y:250, x:-40},"play9-6")
+        
 
             .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:-10, transformOrigin: "center"},"play9-6")
             .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:10, transformOrigin: "center"},"play9-7")
@@ -69,10 +71,10 @@ export function Part3Animation() {
 
             .to("#phone-call",{duration:.75, opacity:0, x:-100, scaleX:0, transformOrigin: "left"},"play9-14")
             .to("#phone",{duration:.75, opacity:1, x:10, transformOrigin: "center"},"play9-15")
+            
 
-            .to("#music",{duration:.75, scale: .32, x:147, y:45},"play9-15")
-            .to("#heatcool",{duration:.75, scale: .45, x:-160, y:45},"play9-15")
-
+            .to("#music", {motionPath: {path: "#dots-path-1-2", align: "#dots-path-1-2", autoRotate: false}, duration: .75, ease: "none"}, "play9-15")
+            .to("#heatcool", {motionPath: {path: "#dots-path-2-2", align: "#dots-path-2-2", autoRotate: false}, duration: .75, ease: "none"}, "play9-15")
             
             
             .to("#P",{duration:.35, scale:.78, fill:"#6FA3FF", transformOrigin: "left bottom"},"play10")

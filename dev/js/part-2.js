@@ -79,7 +79,7 @@ export function Part2Animation() {
 
         .to("#up-down",{duration:twoSecSpeed, y:-10},"play5-2")
 
-        
+
 
         .to("#music",{duration:twoSecSpeed, scale: .75, x:-50},"play6")
         .to("#heatcool",{duration:twoSecSpeed, scale: 1, x:70, y:-50},"play6")
@@ -96,10 +96,12 @@ export function Part2Animation() {
             .to("#outside-ring",{duration:touchSpeed2, scale:1.5, opacity:0, transformOrigin: "center"},"play6-2")
 
         .to("#Home",{duration:oneSecSpeed, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play7")
+       
+       
+        .to("#phone",{duration:twoSecSpeed, scale: .245, x:10, y:-165, opacity: 1},"play8")
+        .to("#music",{duration:twoSecSpeed, scale: .17, x:77, y:120, opacity: 1},"play8")
+        .to("#heatcool",{duration:twoSecSpeed, scale: .23, x:-280, y:60, opacity: 1},"play8")
 
-        .to("#music",{duration:twoSecSpeed, scale: .32, x:147, y:45, opacity: 1},"play8")
-        .to("#heatcool",{duration:twoSecSpeed, scale: .45, x:-160, y:45, opacity: 1},"play8")
-        .to("#phone",{duration:twoSecSpeed, scale: .46, x:10, y:-260, opacity: 1},"play8")
 
         .to("#music-stuff",{duration:twoSecSpeed, opacity: 0},"play8")
         .to("#HC-stuff",{duration:twoSecSpeed, opacity: 0},"play8")

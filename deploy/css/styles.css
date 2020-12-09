@@ -434,6 +434,18 @@ textarea {
 #section-1 > div svg {
   width: 100%;
 }
+#section-1 #dots-path {
+  visibility: hidden;
+}
+#section-1 #dots-path-2 {
+  visibility: hidden;
+}
+#section-1 #dots-path-1-2 {
+  visibility: hidden;
+}
+#section-1 #dots-path-2-2 {
+  visibility: hidden;
+}
 #section-1 #directions {
   opacity: 0;
 }
