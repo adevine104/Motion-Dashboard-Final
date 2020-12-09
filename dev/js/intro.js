@@ -18,11 +18,11 @@ export function IntroAnimation() {
         .to("#phone",{duration: .01, y:125, x:-6},"play")
         .to("#Nav",{duration: .01, y:125},"play")
         .from("#logo-circle-big", {duration: 3, scale: 10, transformOrigin: "center"}, "play")
-        .to("#big-logo", {duration: 2, scale: .2, y: -320, transformOrigin: "center"}, "play2")
+        .to("#big-logo", {duration: 1, scale: .2, y: -320, transformOrigin: "center"}, "play2")
 
         .to("#speed-circle", {duration: .01, rotate:30, transformOrigin: "center"}, "play2")
         
-        .fromTo("#speed-circle, #HC-circle, #music-circle, #nav-circle, #phone-circle",{drawSVG:"0%"}, {duration: 1.5, drawSVG:"100%"}, "play2.5")
+        .fromTo("#speed-circle, #HC-circle, #music-circle, #nav-circle, #phone-circle",{drawSVG:"0%"}, {duration: 1.5, drawSVG:"100%"}, "play2")
         
         .to("#music-stuff, #HC-stuff, #nav-stuff, #phone-stuff, #speed-stuff", {duration: 1, opacity: 1, transformOrigin: "center"}, "play3")
 

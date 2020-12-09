@@ -47,8 +47,8 @@ export function Part3Animation() {
             .to("#phone-call",{duration:1, y:50, transformOrigin: "left"},"play9-5")
             .from("#phone-call",{duration:1, opacity:0, x:-100, scaleX:1, transformOrigin: "left"},"play9-6")
             
-            .to("#music",{duration:1, scale: .18, y:220, x:370},"play9-6")
-            .to("#heatcool",{duration:1, scale: .25, y:250, x:-40},"play9-6")
+            .to("#music",{duration:.75, scale: .18, y:220, x:370},"play9-6")
+            .to("#heatcool",{duration:.75, scale: .25, y:250, x:-40},"play9-6")
 
             .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-6")
             .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-7")
@@ -60,16 +60,16 @@ export function Part3Animation() {
 
             .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-61")
             .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-71")
-            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-81")
-            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-91")
+            // .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-81")
+            // .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-91")
             .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:0, transformOrigin: "center"},"play9-92")
 
             .to("#touch",{duration:.1, x:-300, y:-100},"play9-11")
-            .to("#touch-print, #outside-ring",{duration:.75, x:-58, y:-12, opacity: 1},"play9-12")
-            .to("#touch-print",{duration:.75, scale:.65, transformOrigin: "center"},"play9-12")
-            .to("#outside-ring",{duration:.75, scale:.85, transformOrigin: "center"},"play9-12")
-            .to("#touch-print",{duration:.75, scale:1, opacity:0, transformOrigin: "center"},"play9-13")
-            .to("#outside-ring",{duration:.75, scale:1.5, opacity:0, transformOrigin: "center"},"play9-13")
+            .to("#touch-print, #outside-ring",{duration:.5, x:-58, y:-12, opacity: 1},"play9-12")
+            .to("#touch-print",{duration:.5, scale:.65, transformOrigin: "center"},"play9-12")
+            .to("#outside-ring",{duration:.5, scale:.85, transformOrigin: "center"},"play9-12")
+            .to("#touch-print",{duration:.5, scale:1, opacity:0, transformOrigin: "center"},"play9-13")
+            .to("#outside-ring",{duration:.5, scale:1.5, opacity:0, transformOrigin: "center"},"play9-13")
 
             .to("#phone-call",{duration:1, opacity:0, x:-100, scaleX:0, transformOrigin: "left"},"play9-14")
             .to("#phone",{duration:1, opacity:1, x:10, transformOrigin: "center"},"play9-15")
@@ -79,15 +79,15 @@ export function Part3Animation() {
 
             
             
-            .to("#P",{duration:.5, scale:.78, fill:"#6FA3FF", transformOrigin: "left bottom"},"play10")
+            .to("#P",{duration:.35, scale:.78, fill:"#6FA3FF", transformOrigin: "left bottom"},"play10")
 
-            .to("#R",{duration:.5, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play10")
-            .to("#R",{duration:.5, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play11")
+            .to("#R",{duration:.35, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play10")
+            .to("#R",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play11")
 
-            .to("#N",{duration:.5, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play11")
-            .to("#N",{duration:.5, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play12")
+            .to("#N",{duration:.35, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play11")
+            .to("#N",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play12")
 
-            .to("#D",{duration:.5, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play12")
+            .to("#D",{duration:.35, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play12")
 
             
             // .to("#pointer",{duration:3, rotate:60, transformOrigin: "right"},"play13")
@@ -146,6 +146,17 @@ export function Part3Animation() {
 
             // .to("#pointer",{duration:3, rotate:0, transformOrigin: "right"},"play14")
             .fromTo("#speed-pointer",{drawSVG:"57.5% 58.5%"}, {duration: 1.5, drawSVG:"41% 42%"}, "play14")
+
+
+            .to("#D",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play14-1")
+
+            .to("#N",{duration:.35, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play14-1")
+            .to("#N",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play15")
+
+            .to("#R",{duration:.35, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play15")
+            .to("#R",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play16")
+
+            .to("#P",{duration:.35, scale:1, fill:"#BBD7FF", transformOrigin: "left bottom"},"play16")
 
 
     return Part3TL;
