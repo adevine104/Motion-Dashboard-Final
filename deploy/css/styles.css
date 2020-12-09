@@ -499,7 +499,10 @@ textarea {
 #section-1 #prndl {
   opacity: 0;
 }
-#section-1 #music-stuff {
+#section-1 #Toxic-2 {
+  opacity: 0;
+}
+#section-1 #phone-call {
   opacity: 0;
 }
 #section-1 #HC-stuff {
@@ -509,8 +512,5 @@ textarea {
   opacity: 0;
 }
 #section-1 #phone-stuff {
-  opacity: 0;
-}
-#section-1 #speed-stuff {
   opacity: 0;
 }

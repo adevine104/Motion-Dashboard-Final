@@ -76,7 +76,9 @@ export function itemsInAnimation() {
     .from("#Triangle-left", {duration: 1, opacity: 0, x:40, transformOrigin: "center"}, "play3")
     .from("#CD, #radio-icon", {duration: 1, opacity: 0, y:400, stagger:.2, transformOrigin: "center"}, "play3")
     .from("#AUX", {duration: .8, opacity: 0, y:30, transformOrigin: "center"}, "play3")
-    .from("#Toxic-1, #Toxic-2", {duration: 1, opacity: 0, x:100, transformOrigin: "center"}, "play3")
+    .from("#Toxic-1", {duration: 1, opacity: 0, x:100, transformOrigin: "center"}, "play3")
+    .to("#Toxic-2",{duration:.01, x:720}, "play3")
+    .to("#Toxic-2",{duration:.01, opacity:1}, "play3-1")
 
 
     .from("#caller-list, #caller-blocks", {duration: 1, opacity: 0, x:30, transformOrigin: "center"}, "play3")

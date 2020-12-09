@@ -8,12 +8,10 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin);
 
 
 var counterSpeed = 100;
-
 // Set this number you want your counter to count up to. Default is 20
-var topSpeed = 68;
-
+var topSpeed = 72;
 // If yu don't want your speed to start at 0, change it here. Default is 0.
-var speedNumber = 72;
+var speedNumber = 68;
 
 var myVar;
 
@@ -62,15 +60,14 @@ export function Part2Animation() {
         .to("#play-2",{duration:oneSecSpeed, morphSVG:"#pause-2"},"play4")
         // .to("#pause-1, #pause-2, #play-1, #play-2",{duration:.01, rotate:-90},"play4-0")
 
-        .fromTo("#blue-line",{drawSVG:"25%"}, {duration: 3.5, drawSVG:"50%"}, "play4")
-        .to("#play-1, #play-2, #pause-1, #pause-2",{duration:.01, opacity:0},"play4-1")
-        .to("#pause-3, #pause-4",{duration:.01, opacity:1},"play4-1")
-        .to("#pause-3",{duration:oneSecSpeed, morphSVG:"#play-3"},"play4-2")
-        .to("#pause-4",{duration:oneSecSpeed, morphSVG:"#play-4"},"play4-2")
-        .to("#pause-3, #pause-4, #play-3, #play-4",{duration:.01, rotate:90, x:25},"play4-3")
+        // .fromTo("#blue-line",{drawSVG:"25%"}, {duration: 3.5, drawSVG:"50%"}, "play4")
+        // .to("#play-1, #play-2, #pause-1, #pause-2",{duration:.01, opacity:0},"play4-1")
+        // .to("#pause-3, #pause-4",{duration:.01, opacity:1},"play4-1")
+        // .to("#pause-3",{duration:oneSecSpeed, morphSVG:"#play-3"},"play4-2")
+        // .to("#pause-4",{duration:oneSecSpeed, morphSVG:"#play-4"},"play4-2")
+        // .to("#pause-3, #pause-4, #play-3, #play-4",{duration:.01, rotate:90, x:25},"play4-3")
 
-        
-        .from("#HC-counter", {duration: 0.25, onComplete: startTimer}, "play5")
+    
 
         .to("#music",{duration:twoSecSpeed, scale: .75, x:110, y:100},"play5")
         .to("#heatcool",{duration:twoSecSpeed, scale: 1.25, x:-100, y:0},"play5")
@@ -78,7 +75,7 @@ export function Part2Animation() {
 
         // .to("#fan", {duration: 2, rotate: 360, repeat: 3, transformOrigin: "center"},"play5-1 play5-2")
 
-            .to("#touch",{duration:.1, x:-100, y:180},"play5-0")
+            .to("#touch",{duration:.1, x:-98, y:100},"play5-0")
             .to("#touch-print, #outside-ring",{duration: touchSpeed, x:50, y:-135, opacity: 1},"play5-1")
             .to("#touch-print",{duration:touchSpeed, scale:.65, transformOrigin: "center"},"play5-1")
             .to("#outside-ring",{duration:touchSpeed, scale:.85, transformOrigin: "center"},"play5-1")
@@ -86,13 +83,13 @@ export function Part2Animation() {
             .to("#outside-ring",{duration:touchSpeed, scale:1.5, opacity:0, transformOrigin: "center"},"play5-2")
 
 
-        .to("#Triangle-2",{duration:.25, scale: .8, transformOrigin: "center"},"play5-1")
-        .to("#Triangle-2",{duration:.5, scale: 1, transformOrigin: "center"},"play5-2")
+        .to("#Triangle-1",{duration:.25, scale: .8, transformOrigin: "center"},"play5-1")
+        .to("#Triangle-1",{duration:.5, scale: 1, transformOrigin: "center"},"play5-2")
         // .to("#Triangle-2",{duration:.75, scale: .8, transformOrigin: "center"},"play5-4")
         // .to("#Triangle-2",{duration:.5, scale: 1, transformOrigin: "center"},"play5-5")
 
-
-        .to("#up-down",{duration:twoSecSpeed, y:10},"play5-9")
+        .to("#HC-counter", {duration: twoSecSpeed, onComplete: startTimer}, "play5-3")
+        .to("#up-down",{duration:twoSecSpeed, y:-10},"play5-3")
 
         .to("#music",{duration:twoSecSpeed, scale: .75, x:-50},"play6")
         .to("#heatcool",{duration:twoSecSpeed, scale: 1, x:70, y:-50},"play6")

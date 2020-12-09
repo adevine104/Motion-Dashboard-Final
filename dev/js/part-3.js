@@ -9,6 +9,29 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, MotionPathPlugin);
 
 // var tl = gsap.timeline({ease: "power2.out"});
 
+var counterSpeed = 100;
+// Set this number you want your counter to count up to. Default is 20
+var topSpeed = 40;
+// If yu don't want your speed to start at 0, change it here. Default is 0.
+var speedNumber = 0;
+
+var myVar;
+
+function startTimer(){
+    myVar = setInterval(speedCounter, counterSpeed);
+}
+
+export function speedCounter() {
+	if (speedNumber < topSpeed) {
+        speedNumber++;
+       $("#speed-counter").html(speedNumber);
+		//document.getElementById("HC-counter").innerHTML = speedNumber;
+	} else {
+		clearInterval(myVar);
+	}
+	return speedNumber;
+}
+
 
 const Part3TL = gsap.timeline();
 
@@ -16,7 +39,12 @@ gsap.set("#car-pointer", {transformOrigin: "50% 50%", xPercent: -50, yPercent: -
 
 
 export function Part3Animation() {
-    Part3TL.to("#P",{duration:.5, scale:.78, fill:"#6FA3FF", transformOrigin: "left bottom"},"play10")
+
+    Part3TL.to("#phone-circle",{duration:1, morphSVG:"#phone-box"},"play9-5")
+
+    
+            
+            .to("#P",{duration:.5, scale:.78, fill:"#6FA3FF", transformOrigin: "left bottom"},"play10")
 
             .to("#R",{duration:.5, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play10")
             .to("#R",{duration:.5, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play11")
@@ -31,7 +59,7 @@ export function Part3Animation() {
             .to("#speed-pointer",{duration:.01, rotate:0, transformOrigin: "center"},"play13")
             .fromTo("#speed-pointer",{drawSVG:"41% 42%"}, {duration: 1.5, drawSVG:"57.5% 58.5%"}, "play13")
   
-
+            .from("#speed-counter", {duration: 1, onComplete: startTimer}, "play13")
             
             .fromTo("#nav-white-line",{drawSVG:"0%"}, {duration: 2, drawSVG:"25%", ease: "none"}, "play13-0")
             .to("#directions-1",{duration:.5, opacity:0},"play13-1")
