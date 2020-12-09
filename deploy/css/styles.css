@@ -502,9 +502,6 @@ textarea {
 #section-1 #Toxic-2 {
   opacity: 0;
 }
-#section-1 #phone-call {
-  opacity: 0;
-}
 #section-1 #HC-stuff {
   opacity: 0;
 }
@@ -512,5 +509,32 @@ textarea {
   opacity: 0;
 }
 #section-1 #phone-stuff {
+  opacity: 0;
+}
+#section-1 #Toxic-2 {
+  opacity: 0;
+}
+#section-1 #C-thirtythree {
+  opacity: 0;
+}
+#section-1 #C-thirtysix {
+  opacity: 0;
+}
+#section-1 #C-thirtynine {
+  opacity: 0;
+}
+#section-1 #C-fourtyone {
+  opacity: 0;
+}
+#section-1 #S-ninenine {
+  opacity: 0;
+}
+#section-1 #S-onehun {
+  opacity: 0;
+}
+#section-1 #S-oneOone {
+  opacity: 0;
+}
+#section-1 #S-oneOtwo {
   opacity: 0;
 }

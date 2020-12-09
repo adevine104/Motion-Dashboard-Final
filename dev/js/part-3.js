@@ -15,16 +15,17 @@ var topSpeed = 40;
 // If yu don't want your speed to start at 0, change it here. Default is 0.
 var speedNumber = 0;
 
+
 var myVar;
 
-function startTimer(){
+function startTimer2(){
     myVar = setInterval(speedCounter, counterSpeed);
 }
 
 export function speedCounter() {
 	if (speedNumber < topSpeed) {
         speedNumber++;
-       $("#speed-counter").html(speedNumber);
+       $("#speed-counter-2").html(speedNumber);
 		//document.getElementById("HC-counter").innerHTML = speedNumber;
 	} else {
 		clearInterval(myVar);
@@ -40,9 +41,43 @@ gsap.set("#car-pointer", {transformOrigin: "50% 50%", xPercent: -50, yPercent: -
 
 export function Part3Animation() {
 
-    Part3TL.to("#phone-circle",{duration:1, morphSVG:"#phone-box"},"play9-5")
+    Part3TL
+            // .to("#border-circle",{duration:1, morphSVG:"#phone-box"},"play9-5")
+            .to("#phone",{duration:1, opacity:0, x:-100, transformOrigin: "center"},"play9-5")
+            .to("#phone-call",{duration:1, y:50, transformOrigin: "left"},"play9-5")
+            .from("#phone-call",{duration:1, opacity:0, x:-100, scaleX:1, transformOrigin: "left"},"play9-6")
+            
+            .to("#music",{duration:1, scale: .18, y:220, x:370},"play9-6")
+            .to("#heatcool",{duration:1, scale: .25, y:250, x:-40},"play9-6")
 
-    
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-6")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-7")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-8")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-9")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:0, transformOrigin: "center"},"play9-91")
+
+            .to("#phone-icon-answer, #phone-icon-end",{duration:1, rotate:0, transformOrigin: "center"},"play9-10")
+
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-61")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-71")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-81")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-91")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:0, transformOrigin: "center"},"play9-92")
+
+            .to("#touch",{duration:.1, x:-300, y:-100},"play9-11")
+            .to("#touch-print, #outside-ring",{duration:.75, x:-58, y:-12, opacity: 1},"play9-12")
+            .to("#touch-print",{duration:.75, scale:.65, transformOrigin: "center"},"play9-12")
+            .to("#outside-ring",{duration:.75, scale:.85, transformOrigin: "center"},"play9-12")
+            .to("#touch-print",{duration:.75, scale:1, opacity:0, transformOrigin: "center"},"play9-13")
+            .to("#outside-ring",{duration:.75, scale:1.5, opacity:0, transformOrigin: "center"},"play9-13")
+
+            .to("#phone-call",{duration:1, opacity:0, x:-100, scaleX:0, transformOrigin: "left"},"play9-14")
+            .to("#phone",{duration:1, opacity:1, x:10, transformOrigin: "center"},"play9-15")
+
+            .to("#music",{duration:1, scale: .32, x:147, y:45},"play9-15")
+            .to("#heatcool",{duration:1, scale: .45, x:-160, y:45},"play9-15")
+
+            
             
             .to("#P",{duration:.5, scale:.78, fill:"#6FA3FF", transformOrigin: "left bottom"},"play10")
 
@@ -59,26 +94,51 @@ export function Part3Animation() {
             .to("#speed-pointer",{duration:.01, rotate:0, transformOrigin: "center"},"play13")
             .fromTo("#speed-pointer",{drawSVG:"41% 42%"}, {duration: 1.5, drawSVG:"57.5% 58.5%"}, "play13")
   
-            .from("#speed-counter", {duration: 1, onComplete: startTimer}, "play13")
+            .to("#speed-counter-2",{duration: 1, onComplete: startTimer2}, "play13")
             
             .fromTo("#nav-white-line",{drawSVG:"0%"}, {duration: 2, drawSVG:"25%", ease: "none"}, "play13-0")
             .to("#directions-1",{duration:.5, opacity:0},"play13-1")
             .to("#directions-2",{duration:.5, opacity:1},"play13-1")
+
+            .to("#C-thirty",{duration:.15, opacity:0},"play13-1")
+            .to("#C-thirtythree",{duration:.15, opacity:1},"play13-1")
+
+            .to("#S-nineeight",{duration:.15, opacity:0},"play13-1")
+            .to("#S-ninenine",{duration:.15, opacity:1},"play13-1")
 
 
             .fromTo("#nav-white-line",{drawSVG:"25%"}, {duration: 2, drawSVG:"50%", ease: "none"}, "play13-1")
             .to("#directions-2",{duration:.5, opacity:0},"play13-2")
             .to("#directions-3",{duration:.5, opacity:1},"play13-2")
 
+            .to("#C-thirtythree",{duration:.15, opacity:0},"play13-2")
+            .to("#C-thirtysix",{duration:.15, opacity:1},"play13-2")
+
+            .to("#S-ninenine",{duration:.15, opacity:0},"play13-2")
+            .to("#S-onehun",{duration:.15, opacity:1},"play13-2")
+
 
             .fromTo("#nav-white-line",{drawSVG:"50%"}, {duration: 2, drawSVG:"75%", ease: "none"}, "play13-2")
             .to("#directions-3",{duration:.5, opacity:0},"play13-3")
             .to("#directions-4",{duration:.5, opacity:1},"play13-3")
 
+            .to("#C-thirtysix",{duration:.15, opacity:0},"play13-3")
+            .to("#C-thirtynine",{duration:.15, opacity:1},"play13-3")
+
+            .to("#S-onehun",{duration:.15, opacity:0},"play13-3")
+            .to("#S-oneOone",{duration:.15, opacity:1},"play13-3")
+
 
             .fromTo("#nav-white-line",{drawSVG:"75%"}, {duration: 2, drawSVG:"100%", ease: "none"}, "play13-3")
             .to("#directions-4",{duration:.5, opacity:0},"play13-4")
             .to("#directions-5",{duration:.5, opacity:1},"play13-4")
+
+            .to("#C-thirtynine",{duration:.15, opacity:0},"play13-4")
+            .to("#C-fourtyone",{duration:.15, opacity:1},"play13-4")
+
+            .to("#S-oneOone",{duration:.15, opacity:0},"play13-4")
+            .to("#S-oneOtwo",{duration:.15, opacity:1},"play13-4")
+
 
 
             .to("#car-pointer", {motionPath: {path: "#nav-blue-line", align: "#nav-white-line", autoRotate: true}, duration: 8, ease: "none"}, "play13-0")

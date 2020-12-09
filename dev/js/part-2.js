@@ -69,7 +69,7 @@ export function Part2Animation() {
 
     
 
-        .to("#music",{duration:twoSecSpeed, scale: .75, x:110, y:100},"play5")
+        .to("#music",{duration:twoSecSpeed, scale: .75, x:10, y:100},"play5")
         .to("#heatcool",{duration:twoSecSpeed, scale: 1.25, x:-100, y:0},"play5")
         .to("#Nav",{duration:twoSecSpeed, y:225},"play5")
 
@@ -107,7 +107,7 @@ export function Part2Animation() {
 
         .to("#Home",{duration:oneSecSpeed, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play7")
 
-        .to("#music",{duration:twoSecSpeed, scale: .32, x:435, y:45, opacity: 1},"play8")
+        .to("#music",{duration:twoSecSpeed, scale: .32, x:147, y:45, opacity: 1},"play8")
         .to("#heatcool",{duration:twoSecSpeed, scale: .45, x:-160, y:45, opacity: 1},"play8")
         .to("#phone",{duration:twoSecSpeed, scale: .46, x:10, y:-260, opacity: 1},"play8")
 
