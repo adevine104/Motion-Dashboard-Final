@@ -13,8 +13,6 @@ const introTL = gsap.timeline();
 
 export function IntroAnimation() {
     introTL.from("#spikey-shape-big", {duration: 1.5, scale: 0, transformOrigin: "center"}, "play")
-    // .to("#pause-1, #pause-2",{duration:3, rotate:-90},"play")
-        // .to("#Toxic-2",{duration:.01, x:720},"play")
         .to("#phone",{duration: .01, y:125, x:-6},"play")
         .to("#Nav",{duration: .01, y:125},"play")
         .from("#logo-circle-big", {duration: 3, scale: 10, transformOrigin: "center"}, "play")
@@ -26,11 +24,6 @@ export function IntroAnimation() {
         
         .to("#music-stuff, #HC-stuff, #nav-stuff, #phone-stuff, #speed-stuff", {duration: .01, opacity: 1, transformOrigin: "center"}, "play3.1")
 
-        
-        // .to("#music-circle",{duration: 3, opacity:0},"play3")
-        // .to("#HC-circle",{duration: 3, opacity:0},"play3")
-        // .to("#nav-circle",{duration: 3, opacity:0},"play3")
-        // .to("#phone-circle",{duration: 3, opacity:0},"play3");
     return introTL;
 }
 

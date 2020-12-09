@@ -23,6 +23,7 @@ GSDevTools.create();
 
 
 fanTimeline();
+fanTimeline2();
 musicTimeline();
 musicLineTimeline();
 radioTimeline();
@@ -30,10 +31,18 @@ radio2Timeline();
 phoneCallTimeline();
 
 function fanTimeline(){
-    const fanTimeline = gsap.timeline({repeat:10});
+    const fanTimeline = gsap.timeline({repeat:4});
 
     // tell timeoine to play
-    fanTimeline.to("#fan, #fan-icon-big", {duration: 3, rotate: 360, ease: "Linear.easeNone", transformOrigin: "center"});
+    fanTimeline.to("#fan", {duration: 3, rotate: 360, ease: "Linear.easeNone", transformOrigin: "center"});
+
+}
+
+function fanTimeline2(){
+    const fanTimeline2 = gsap.timeline({repeat:11});
+
+    // tell timeoine to play
+    fanTimeline2.to("#fan-icon-big", {duration: 3, rotate: 360, ease: "Linear.easeNone", transformOrigin: "center"});
 
 }
 
@@ -56,7 +65,7 @@ function musicLineTimeline(){
 }
 
 function radioTimeline(){
-    const radioTimeline = gsap.timeline({repeat:5});
+    const radioTimeline = gsap.timeline({repeat:4});
 
     // tell timeoine to play
     radioTimeline.to("#radio-icon-far-right, #radio-icon-middle-right, #radio-icon-near-right", {duration: 1.5, scale: 1.25, opacity: 0, x:10, stagger:.2, transformOrigin: "right center"} ,"rays")
@@ -67,7 +76,7 @@ function radioTimeline(){
 }
 
 function radio2Timeline(){
-    const radio2Timeline = gsap.timeline({repeat:9});
+    const radio2Timeline = gsap.timeline({repeat:8});
 
     // tell timeoine to play
     radio2Timeline.to("#RB-far-right, #RB-middle-right, #RB-close-right", {duration: 1.5, scale: 1.25, opacity: 0, x:15, stagger:.2, transformOrigin: "right center"} ,"rays")

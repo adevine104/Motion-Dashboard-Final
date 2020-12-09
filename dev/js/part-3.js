@@ -41,9 +41,7 @@ gsap.set("#car-pointer", {transformOrigin: "50% 50%", xPercent: -50, yPercent: -
 
 export function Part3Animation() {
 
-    Part3TL
-            // .to("#border-circle",{duration:1, morphSVG:"#phone-box"},"play9-5")
-            .to("#phone",{duration:.75, opacity:0, x:-100, transformOrigin: "center"},"play9-5")
+    Part3TL.to("#phone",{duration:.75, opacity:0, x:-100, transformOrigin: "center"},"play9-5")
             .to("#phone-call",{duration:.75, y:50, transformOrigin: "left"},"play9-5")
             .from("#phone-call",{duration:.75, opacity:0, x:-100, scaleX:1, transformOrigin: "left"},"play9-6")
             
@@ -60,8 +58,6 @@ export function Part3Animation() {
 
             .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:-10, transformOrigin: "center"},"play9-61")
             .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:10, transformOrigin: "center"},"play9-71")
-            // .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-81")
-            // .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-91")
             .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:0, transformOrigin: "center"},"play9-92")
 
             .to("#touch",{duration:.1, x:-300, y:-100},"play9-11")
@@ -90,7 +86,6 @@ export function Part3Animation() {
             .to("#D",{duration:.35, scale:1.25, fill:"#BBD7FF", transformOrigin: "left bottom"},"play12")
 
             
-            // .to("#pointer",{duration:3, rotate:60, transformOrigin: "right"},"play13")
             .to("#speed-pointer",{duration:.01, rotate:0, transformOrigin: "center"},"play13")
             .fromTo("#speed-pointer",{drawSVG:"41% 42%"}, {duration: 1.5, drawSVG:"57.5% 58.5%"}, "play13")
   
@@ -140,11 +135,9 @@ export function Part3Animation() {
             .to("#S-oneOtwo",{duration:.15, opacity:1},"play13-4")
 
 
-
             .to("#car-pointer", {motionPath: {path: "#nav-blue-line", align: "#nav-white-line", autoRotate: true}, duration: 8, ease: "none"}, "play13-0")
 
 
-            // .to("#pointer",{duration:3, rotate:0, transformOrigin: "right"},"play14")
             .fromTo("#speed-pointer",{drawSVG:"57.5% 58.5%"}, {duration: 1.5, drawSVG:"41% 42%"}, "play14")
 
 
