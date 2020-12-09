@@ -18,14 +18,14 @@ var speedNumber = 0;
 
 var myVar;
 
-function startTimer2(){
+function startTimer(){
     myVar = setInterval(speedCounter, counterSpeed);
 }
 
 export function speedCounter() {
 	if (speedNumber < topSpeed) {
         speedNumber++;
-       $("#speed-counter-2").html(speedNumber);
+       $("#speed-counter").html(speedNumber);
 		//document.getElementById("HC-counter").innerHTML = speedNumber;
 	} else {
 		clearInterval(myVar);
@@ -43,26 +43,26 @@ export function Part3Animation() {
 
     Part3TL
             // .to("#border-circle",{duration:1, morphSVG:"#phone-box"},"play9-5")
-            .to("#phone",{duration:1, opacity:0, x:-100, transformOrigin: "center"},"play9-5")
-            .to("#phone-call",{duration:1, y:50, transformOrigin: "left"},"play9-5")
-            .from("#phone-call",{duration:1, opacity:0, x:-100, scaleX:1, transformOrigin: "left"},"play9-6")
+            .to("#phone",{duration:.75, opacity:0, x:-100, transformOrigin: "center"},"play9-5")
+            .to("#phone-call",{duration:.75, y:50, transformOrigin: "left"},"play9-5")
+            .from("#phone-call",{duration:.75, opacity:0, x:-100, scaleX:1, transformOrigin: "left"},"play9-6")
             
             .to("#music",{duration:.75, scale: .18, y:220, x:370},"play9-6")
             .to("#heatcool",{duration:.75, scale: .25, y:250, x:-40},"play9-6")
 
-            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-6")
-            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-7")
-            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-8")
-            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-9")
-            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:0, transformOrigin: "center"},"play9-91")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:-10, transformOrigin: "center"},"play9-6")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:10, transformOrigin: "center"},"play9-7")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:-10, transformOrigin: "center"},"play9-8")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:10, transformOrigin: "center"},"play9-9")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:0, transformOrigin: "center"},"play9-91")
 
             .to("#phone-icon-answer, #phone-icon-end",{duration:1, rotate:0, transformOrigin: "center"},"play9-10")
 
-            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-61")
-            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-71")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:-10, transformOrigin: "center"},"play9-61")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:10, transformOrigin: "center"},"play9-71")
             // .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:-10, transformOrigin: "center"},"play9-81")
             // .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:10, transformOrigin: "center"},"play9-91")
-            .to("#phone-icon-answer, #phone-icon-end",{duration:.25, rotate:0, transformOrigin: "center"},"play9-92")
+            .to("#phone-icon-answer, #phone-icon-end",{duration:.15, rotate:0, transformOrigin: "center"},"play9-92")
 
             .to("#touch",{duration:.1, x:-300, y:-100},"play9-11")
             .to("#touch-print, #outside-ring",{duration:.5, x:-58, y:-12, opacity: 1},"play9-12")
@@ -71,11 +71,11 @@ export function Part3Animation() {
             .to("#touch-print",{duration:.5, scale:1, opacity:0, transformOrigin: "center"},"play9-13")
             .to("#outside-ring",{duration:.5, scale:1.5, opacity:0, transformOrigin: "center"},"play9-13")
 
-            .to("#phone-call",{duration:1, opacity:0, x:-100, scaleX:0, transformOrigin: "left"},"play9-14")
-            .to("#phone",{duration:1, opacity:1, x:10, transformOrigin: "center"},"play9-15")
+            .to("#phone-call",{duration:.75, opacity:0, x:-100, scaleX:0, transformOrigin: "left"},"play9-14")
+            .to("#phone",{duration:.75, opacity:1, x:10, transformOrigin: "center"},"play9-15")
 
-            .to("#music",{duration:1, scale: .32, x:147, y:45},"play9-15")
-            .to("#heatcool",{duration:1, scale: .45, x:-160, y:45},"play9-15")
+            .to("#music",{duration:.75, scale: .32, x:147, y:45},"play9-15")
+            .to("#heatcool",{duration:.75, scale: .45, x:-160, y:45},"play9-15")
 
             
             
@@ -94,7 +94,7 @@ export function Part3Animation() {
             .to("#speed-pointer",{duration:.01, rotate:0, transformOrigin: "center"},"play13")
             .fromTo("#speed-pointer",{drawSVG:"41% 42%"}, {duration: 1.5, drawSVG:"57.5% 58.5%"}, "play13")
   
-            .to("#speed-counter-2",{duration: 1, onComplete: startTimer2}, "play13")
+            .to("#speed-counter",{duration: 1, onComplete: startTimer}, "play13")
             
             .fromTo("#nav-white-line",{drawSVG:"0%"}, {duration: 2, drawSVG:"25%", ease: "none"}, "play13-0")
             .to("#directions-1",{duration:.5, opacity:0},"play13-1")

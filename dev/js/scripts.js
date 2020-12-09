@@ -67,7 +67,7 @@ function radioTimeline(){
 }
 
 function radio2Timeline(){
-    const radio2Timeline = gsap.timeline({repeat:10});
+    const radio2Timeline = gsap.timeline({repeat:9});
 
     // tell timeoine to play
     radio2Timeline.to("#RB-far-right, #RB-middle-right, #RB-close-right", {duration: 1.5, scale: 1.25, opacity: 0, x:15, stagger:.2, transformOrigin: "right center"} ,"rays")

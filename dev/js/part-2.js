@@ -88,7 +88,7 @@ export function Part2Animation() {
         // .to("#Triangle-2",{duration:.75, scale: .8, transformOrigin: "center"},"play5-4")
         // .to("#Triangle-2",{duration:.5, scale: 1, transformOrigin: "center"},"play5-5")
 
-        .to("#HC-counter", {duration: twoSecSpeed, onComplete: startTimer}, "play5-3")
+        .to("#HC-counter", {duration: twoSecSpeed, onComplete: startTimer}, "play5-2")
         .to("#up-down",{duration:twoSecSpeed, y:-10},"play5-3")
 
         .to("#music",{duration:twoSecSpeed, scale: .75, x:-50},"play6")

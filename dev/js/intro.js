@@ -24,13 +24,7 @@ export function IntroAnimation() {
         
         .fromTo("#speed-circle, #HC-circle, #music-circle, #nav-circle, #phone-circle",{drawSVG:"0%"}, {duration: 1.5, drawSVG:"100%"}, "play2")
         
-        .to("#music-stuff, #HC-stuff, #nav-stuff, #phone-stuff, #speed-stuff", {duration: 1, opacity: 1, transformOrigin: "center"}, "play3")
-
-
-        .from("#clock-weather-date", {duration: 1, opacity: 0, x: 30, transformOrigin: "center"}, "play3")
-        .to("#clock-weather-date", {duration: 1, opacity: 1, transformOrigin: "center"}, "play3")
-        .from("#prndl", {duration: 1, opacity: 0, x: -30, transformOrigin: "center"}, "play3")
-        .to("#prndl", {duration: 1, opacity: 1, transformOrigin: "center"}, "play3")
+        .to("#music-stuff, #HC-stuff, #nav-stuff, #phone-stuff, #speed-stuff", {duration: .01, opacity: 1, transformOrigin: "center"}, "play3.1")
 
         
         // .to("#music-circle",{duration: 3, opacity:0},"play3")
@@ -45,7 +39,13 @@ const itemsInTL = gsap.timeline();
 
 
 export function itemsInAnimation() {
-    itemsInTL.fromTo("#fuel-filler",{drawSVG:"0%"}, {duration: 1, drawSVG:"100%"}, "play3")
+    itemsInTL.from("#clock-weather-date", {duration: 1, opacity: 0, x: 30, transformOrigin: "center"}, "play3")
+    .to("#clock-weather-date", {duration: 1, opacity: 1, transformOrigin: "center"}, "play3")
+    .from("#prndl", {duration: 1, opacity: 0, x: -30, transformOrigin: "center"}, "play3")
+    .to("#prndl", {duration: 1, opacity: 1, transformOrigin: "center"}, "play3")
+    
+    
+    .fromTo("#fuel-filler",{drawSVG:"0%"}, {duration: 1, drawSVG:"100%"}, "play3")
     .fromTo("#fuel-line",{drawSVG:"0%"}, {duration: 1, drawSVG:"100%"}, "play3")
     .from("#F, #E", {duration: 1, opacity: 0, transformOrigin: "left bottom"}, "play3")
     .from("#speed-info", {duration: 2, opacity: 0, x:330, transformOrigin: "center"}, "play3")
