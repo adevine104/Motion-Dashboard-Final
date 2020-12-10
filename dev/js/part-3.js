@@ -5,34 +5,6 @@ import {MotionPathPlugin} from "gsap/MotionPathPlugin";
 
 gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, MotionPathPlugin);
 
-// var RBSpeed = .8;
-
-// var tl = gsap.timeline({ease: "power2.out"});
-
-// var counterSpeedTwo = 100;
-// // Set this number you want your counter to count up to. Default is 20
-// var topSpeedTwo = 40;
-// // If yu don't want your speed to start at 0, change it here. Default is 0.
-// var speedNumberTwo = 0;
-
-
-// var myVarTwo;
-
-// function startTimerTwo(){
-//     myVarTwo = setInterval(speedCounterTwo, counterSpeedTwo);
-// }
-
-// export function speedCounterTwo() {
-// 	if (speedNumberTwo < topSpeedTwo) {
-//         speedNumberTwo++;
-//        $("#speed-counter").html(speedNumberTwo);
-// 		//document.getElementById("HC-counter").innerHTML = speedNumber;
-// 	} else {
-// 		clearInterval(myVarTwo);
-// 	}
-// 	return speedNumberTwo;
-// }
-
 
 const Part3TL = gsap.timeline();
 

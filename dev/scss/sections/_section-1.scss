@@ -7,6 +7,8 @@
     display: grid;
     grid-template-columns: auto 70% auto;
     grid-template-areas: ". motion .";
+
+    // background-color: #0C0C0C;
     
     >div{
         grid-area: motion;
