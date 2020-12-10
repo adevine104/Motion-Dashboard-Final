@@ -38,8 +38,6 @@ var touchSpeed2 = .75;
 
 var twoSecSpeed = 1;
 
-// var tl = gsap.timeline({ease: "power2.out"});
-
 
 
 const Part2TL = gsap.timeline();
@@ -48,7 +46,7 @@ const Part2TL = gsap.timeline();
 
 export function Part2Animation() {
     Part2TL.to("#touch",{duration:.1, x:-400, y:70},"play3")
-            .to("#touch-print, #outside-ring",{duration:touchSpeed, x:-35, y:-60, opacity: 1},"play3-1")
+            .to("#touch-print, #outside-ring",{duration:touchSpeed, x:-33, y:-58, opacity: 1},"play3-1")
             .to("#touch-print",{duration:touchSpeed, scale:.65, transformOrigin: "center"},"play3-1")
             .to("#outside-ring",{duration:touchSpeed, scale:.85, transformOrigin: "center"},"play3-1")
             .to("#touch-print",{duration:touchSpeed, scale:1, opacity:0, transformOrigin: "center"},"play3-2")
@@ -77,7 +75,7 @@ export function Part2Animation() {
         .to("#Triangle-1",{duration:.25, scale: .8, transformOrigin: "center"},"play5-1")
         .to("#Triangle-1",{duration:.5, scale: 1, transformOrigin: "center"},"play5-2")
 
-        .to("#up-down",{duration:twoSecSpeed, y:-10},"play5-2")
+        .from("#up-down",{duration:twoSecSpeed, y:14},"play5-2")
 
 
 

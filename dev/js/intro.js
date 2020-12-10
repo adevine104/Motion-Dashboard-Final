@@ -4,10 +4,6 @@ import {DrawSVGPlugin} from "gsap/DrawSVGPlugin";
 gsap.registerPlugin(DrawSVGPlugin);
 
 
-
-// var introTL = gsap.timeline({ease: "power2.out"});
-
-
 const introTL = gsap.timeline();
 
 
