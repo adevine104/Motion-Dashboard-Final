@@ -9,29 +9,29 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, MotionPathPlugin);
 
 // var tl = gsap.timeline({ease: "power2.out"});
 
-var counterSpeed = 100;
-// Set this number you want your counter to count up to. Default is 20
-var topSpeed = 40;
-// If yu don't want your speed to start at 0, change it here. Default is 0.
-var speedNumber = 0;
+// var counterSpeedTwo = 100;
+// // Set this number you want your counter to count up to. Default is 20
+// var topSpeedTwo = 40;
+// // If yu don't want your speed to start at 0, change it here. Default is 0.
+// var speedNumberTwo = 0;
 
 
-var myVar;
+// var myVarTwo;
 
-function startTimer(){
-    myVar = setInterval(speedCounter, counterSpeed);
-}
+// function startTimerTwo(){
+//     myVarTwo = setInterval(speedCounterTwo, counterSpeedTwo);
+// }
 
-export function speedCounter() {
-	if (speedNumber < topSpeed) {
-        speedNumber++;
-       $("#speed-counter").html(speedNumber);
-		//document.getElementById("HC-counter").innerHTML = speedNumber;
-	} else {
-		clearInterval(myVar);
-	}
-	return speedNumber;
-}
+// export function speedCounterTwo() {
+// 	if (speedNumberTwo < topSpeedTwo) {
+//         speedNumberTwo++;
+//        $("#speed-counter").html(speedNumberTwo);
+// 		//document.getElementById("HC-counter").innerHTML = speedNumber;
+// 	} else {
+// 		clearInterval(myVarTwo);
+// 	}
+// 	return speedNumberTwo;
+// }
 
 
 const Part3TL = gsap.timeline();
@@ -71,7 +71,7 @@ export function Part3Animation() {
 
             .to("#phone-call",{duration:.75, opacity:0, x:-100, scaleX:0, transformOrigin: "left"},"play9-14")
             .to("#phone",{duration:.75, opacity:1, x:10, transformOrigin: "center"},"play9-15")
-            
+
 
             .to("#music", {motionPath: {path: "#dots-path-1-2", align: "#dots-path-1-2", autoRotate: false}, duration: .75, ease: "none"}, "play9-15")
             .to("#heatcool", {motionPath: {path: "#dots-path-2-2", align: "#dots-path-2-2", autoRotate: false}, duration: .75, ease: "none"}, "play9-15")
@@ -89,9 +89,9 @@ export function Part3Animation() {
 
             
             .to("#speed-pointer",{duration:.01, rotate:0, transformOrigin: "center"},"play13")
-            .fromTo("#speed-pointer",{drawSVG:"41% 42%"}, {duration: 1.5, drawSVG:"57.5% 58.5%"}, "play13")
+            .fromTo("#speed-pointer",{drawSVG:"41% 42%"}, {duration: 2, drawSVG:"57.5% 58.5%"}, "play13")
   
-            .to("#speed-counter",{duration: 1, onComplete: startTimer}, "play13")
+            .to("#speed-counter",{duration: 1, onComplete: countIt}, "play11")
             
             .fromTo("#nav-white-line",{drawSVG:"0%"}, {duration: 2, drawSVG:"25%", ease: "none"}, "play13-0")
             .to("#directions-1",{duration:.5, opacity:0},"play13-1")
@@ -140,7 +140,9 @@ export function Part3Animation() {
             .to("#car-pointer", {motionPath: {path: "#nav-blue-line", align: "#nav-white-line", autoRotate: true}, duration: 8, ease: "none"}, "play13-0")
 
 
-            .fromTo("#speed-pointer",{drawSVG:"57.5% 58.5%"}, {duration: 1.5, drawSVG:"41% 42%"}, "play14")
+            .fromTo("#speed-pointer",{drawSVG:"57.5% 58.5%"}, {duration: 2, drawSVG:"41% 42%"}, "play14")
+            .to("#speed-counter",{duration: 1, onComplete: countItDownTwo}, "play13-4")
+
 
 
             .to("#D",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play14-1")
@@ -155,4 +157,39 @@ export function Part3Animation() {
 
 
     return Part3TL;
+}
+
+
+var startCount = 0,
+    endCount,
+    activeIndex = 1,
+    tm = 1.5,
+    num = { var: startCount },
+    numbers = document.getElementById("speed-counter");
+    
+
+function countIt() {
+activeIndex == 1 ? endCount = 40 : endCount = 40;
+gsap.to(num, tm, {var: endCount, onUpdate:changeNumber, ease: "none"});
+}
+
+function changeNumber() {
+  numbers.innerHTML = (num.var).toFixed();  
+}
+
+var startCountDownTwo = 40,
+    endCountDownTwo,
+    activeIndexDownTwo = 1,
+    tmDownTwo = 1.25,
+    numDownTwo = { var: startCountDownTwo },
+    numbersDownTwo = document.getElementById("speed-counter");
+    
+
+function countItDownTwo() {
+activeIndexDownTwo == 1 ? endCountDownTwo = 0 : endCountDownTwo = 0;
+gsap.to(numDownTwo, tmDownTwo, {var: endCountDownTwo, onUpdate:changeNumberDownTwo, ease: "none"});
+}
+
+function changeNumberDownTwo() {
+  numbersDownTwo.innerHTML = (numDownTwo.var).toFixed();  
 }

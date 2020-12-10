@@ -47,13 +47,10 @@ function fanTimeline2(){
 }
 
 function musicTimeline(){
-    const musicTimeline = gsap.timeline({repeat:2});
+    const musicTimeline = gsap.timeline({repeat:1});
 
     // tell timeoine to play
-    musicTimeline
-    // .to("#Toxic-1",{duration:.01, x:720})
-    // .to("#Toxic-2",{duration:2, x:-480, ease:"none"})
-    // .to("#Toxic-2",{duration:4, x:-10, opacity: 1, ease:"none"})
+    musicTimeline.to("#Toxic-1",{duration:7, x:-390, ease:"none"})
 }
 
 function musicLineTimeline(){
