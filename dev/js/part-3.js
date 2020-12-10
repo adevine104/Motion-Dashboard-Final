@@ -142,7 +142,8 @@ export function Part3Animation() {
 
             .fromTo("#speed-pointer",{drawSVG:"57.5% 58.5%"}, {duration: 2, drawSVG:"41% 42%"}, "play14")
             .to("#speed-counter",{duration: 1, onComplete: countItDownTwo}, "play13-4")
-
+            .to("#speed-counter",{duration: .01, opacity:0}, "play14-1")
+            .to("#speed-counter-2",{duration: .01, opacity:1}, "play14-1")
 
 
             .to("#D",{duration:.35, scale:1, fill:"#6FA3FF", transformOrigin: "left bottom"},"play14-1")
